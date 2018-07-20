@@ -5,6 +5,8 @@ import subprocess
 import spotipy
 import spotipy.util as util
 import simplejson as json
+from identify import identify
+from recorder import record
 
 def getPlaylists(username,token,sp):
     results = sp.current_user_playlists()
@@ -38,11 +40,27 @@ def createPlaylist(username):
 
 def getSong(username,token,sp):
     print("record, identify, return id")
+    #os.system("python recorder.py")
+    #os.system("python identify.py file.flac")
+    record()
+    return identify()
 
 def checkSong(username,token,sp,songid,playlistid):
-    print("sup")
+    print("lets check if the song is already in the playlist, or not on spotify")
+    if "Song not on Spotify" in songid:
+        print(songid)
+    else:
+        print("check")
+        songs = sp.user_playlist(username, playlistid,'tracks')
+        songs = str(songs)
+        if songid in songs:
+            print("song already in playlist")
+        else:
+            addSong(username,token,sp,songid,playlistid)
 
-def addSong(username,token,sp):
+def addSong(username,token,sp,songid,playlistid):
+    ids = [songid]
+    sp.user_playlist_add_tracks(username, playlistid, ids)
     print("song added")
 
 def main():
@@ -61,8 +79,19 @@ def main():
         playlistid = getPlaylists(username,token,sp)
         print(playlistid)
         sp = newToken(username)
-        songid = getSong(username,token,sp)
-        checkSong(username,token,sp,songid,playlistid)
+        while True:
+            response = input("1 to record, 0 to quit\n")
+            if response == "1":
+                songid = getSong(username,token,sp)
+                if songid == "error recording song":
+                    print("error recording/identifying song")
+                else:
+                    checkSong(username,token,sp,songid,playlistid)
+            elif response == "0":
+                print("bye!")
+                break
+            else: 
+                print("invalid command")
     else:
         print ("Can't get token for", username)
 
