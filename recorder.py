@@ -1,3 +1,5 @@
+# this is pyaudio's basic code example from their website with a few changes
+
 import pyaudio
 import sys
 import wave
@@ -10,7 +12,7 @@ def record():
     CHANNELS = 1
     RATE = 44100
     RECORD_SECONDS = 10
-    WAVE_OUTPUT_FILENAME = "file.flac"
+    WAVE_OUTPUT_FILENAME = "file.flac" #better quality than mp3?
 
     p = pyaudio.PyAudio()
 
@@ -35,13 +37,13 @@ def record():
                 # then write data or not to a file
                 frames.append(data) 
     
-    print("* done")
+    #print("* done")
 
     stream.stop_stream()
     stream.close()
     p.terminate()
 
-    print("write the file")
+    #print("write the file")
 
     waveFile = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
     waveFile.setnchannels(CHANNELS)
