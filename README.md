@@ -1,12 +1,23 @@
 # spotifysongadder
-records, identifies, and adds whatever your're listening to into a spotify playlist called "Songs Added from Song Finder". Here's how it works
+records, identifies, and adds whatever your're listening to into a spotify playlist called "Songs Added from Song Finder"
+
+how it works:
+
 -run "python spotify.py username" with username being your spotify username
--paste the link that pops up in your browser back into the console (this happens twice, and is Spotify's authentication - allowing me to read, create, and add to your playlists)
+
+-paste the link that pops up in your browser back into the console (this happens twice, and is Spotify's 
+authentication - allowing me to read, create, and add to your playlists)
+
 -I check for a playlist titled "Songs Added from Song Finder" in your playlists, creating it if it doesn't exist, then getting its id for later use
+
 -recorder.py is called, recording whatever is playing on your computer (works best with headphone mic)
+
 -identify.py is called with that recording, returning either the song's id, title with artist, or an error
+
 -the id is used to see if the song is already in the playlist (no repeats)
+
 -if the song isn't in the playlist, its added
+
 -the process starts over at recording
 
 ### recorder.py
