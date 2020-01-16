@@ -47,18 +47,25 @@ ties it all together using Spotipy (http://spotipy.readthedocs.io/en/latest/), w
 
 ## Things That Went Well
 -Successfully got the program to work
+
 -Was able to practice writing something real in Python
+
 -First time using an API in some sense, and tying together multiple systems/services
 
 ## Things That Could Have Gone Better
--Code ended up a little messy, and there's a few points that could be fixed (for example the authentication requires 2 tries when it should only need 1)
--Didn't have enough time afterwards to improve on the idea, like I originally wanted to (add to any playlist, play the song, send the song to someone, etc)
--Knowing a little more about each system would be good - felt like I was in a little over my head and should review the program to learn more about how each service I used works 
+-Code ended up a little messy, and there's a few points that could be fixed (for example the authentication requires 2 tries when it should only need 1). Once I got something working I left it alone, and should have gone back to see if there were easier or more optimized ways.
+
+-Didn't have enough time afterwards to improve on the idea, like I originally wanted to (add to any playlist, play the song, send the song to someone, etc).
+
+-Knowing a little more about each system would be good - felt like I was in a little over my head and should review the program to learn more about how each service I used works, as well as see if there are other services that would work better today (like using Houndify).
 
 ## possibilites for the future
 -maybe put on a website or add as a extension to a web browser
+
 -allow user to add to any playlist of theirs
+
 -quicker authentication and identification
+
 -more accurate identification and support for more songs
 
 
