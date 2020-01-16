@@ -46,11 +46,11 @@ uses ACRCloud's service (https://www.acrcloud.com/docs/acrcloud/tutorials/identi
 ties it all together using Spotipy (http://spotipy.readthedocs.io/en/latest/), which allows you to use the Spotify Web API in Python. I originally tried using the API normally with Javascript but didn't know enough, so Spotipy helped a ton.
 
 ## Things That Went Well
--Successfully got the program to work
+-Successfully got the program to work with high accuracy. I Tested the project on a sample of 50 songs, and successfully added all songs except for 5 not present on ACRCloud and 3 not available on Spotify.
 
--Was able to practice writing something real in Python
+-Was able to practice writing something real in Python that I was interested in creating.
 
--First time using an API in some sense, and tying together multiple systems/services
+-First time using an API in some sense, and tying together multiple systems/services.
 
 ## Things That Could Have Gone Better
 -Code ended up a little messy, and there's a few points that could be fixed (for example the authentication requires 2 tries when it should only need 1). Once I got something working I left it alone, and should have gone back to see if there were easier or more optimized ways.
