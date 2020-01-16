@@ -1,5 +1,5 @@
 ## What is this?
-This is a personal project I worked on during the summer of 2018. I didn't have an internship at the time, and wanted to work on programming projects for fun and to show future employeers. 
+This is a personal project I worked on during the summer of 2018. I didn't have an internship at the time, and wanted to work on programming projects for fun and to practice using Python to make something practical.
 
 I first thought of trying to make this program after using the app Soundhound on my phone - it allows you to hit a button to identify a song by recording audio from your phone's microphone. This is very useful when you hear a song you like on the radio, but do not know what it is called. The app also has a feature to add the song to your Spotify library once you've identified it. 
 
